@@ -37,7 +37,7 @@ body {
 
 
 .hero-container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,7 +123,7 @@ body {
     z-index: 4;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     width: 90%;
     max-width: 1200px;
     flex-wrap: wrap;
@@ -155,11 +155,88 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.stat-label {
-    font-size: 0.9rem;
-    color: var(--color-text-light);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+@media (max-width: 992px) {
+    
+    .hero-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .stats-section {
+        bottom: 30px;
+        gap: 15px;
+    }
+    
+
+    .title {
+        font-size: clamp(2.2rem, 7vw, 5rem); 
+    }
+    
+    .subtitle {
+        font-size: clamp(0.9rem, 2.5vw, 1.5rem); 
+    }
+}
+
+
+@media (max-width: 860px) {
+    
+    .stats-section {
+        
+        grid-template-columns: repeat(2, 1fr); 
+        display: grid; 
+        gap: 20px;
+        bottom: 20px;
+        padding: 0 15px; 
+    }
+    
+   
+    .stat-card {
+        min-width: unset; 
+    }
+    
+
+    .hero-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+        width: 80%; 
+        margin: 0 auto;
+    }
+    
+    .btn {
+        width: 100%; 
+    }
+
+    
+    .stats-section {
+        flex-direction: column;
+        gap: 10px;
+        width: 80%;
+        position: static;
+        transform: none;
+        margin-top: 20px; 
+        padding-bottom: 20px;
+    }
+    
+    
+    .hero-container {
+        height: auto; 
+        min-height: 100vh;
+    }
+
+    .stat-card {
+        min-width: 100%;
+        padding: 15px;
+    }
 }
 .scroll-indicator {
     position: absolute;
@@ -173,36 +250,12 @@ body {
     z-index: 5;
 }
 
-.scroll-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--color-light-blue);
-    border-radius: 50%;
-    position: absolute;
-    top: -1.5px;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 10px var(--color-light-blue);
-    transition: all 0.5s ease-in-out;
-}
-
 .scroll-dot.scrolled {
-    /* Move the dot slightly up and change color/size when scrolled */
+
     transform: translate(-50%, -10px) scale(1.2); 
-    background-color: var(--color-purple); /* Change color for visual feedback */
+    background-color: var(--color-purple);  
     box-shadow: 0 0 10px var(--color-purple);
 }
-@media (max-width: 768px) {
-    .stats-section {
-        bottom: 20px;
-    }
-
-    .stat-card {
-        min-width: 45%;
-        flex: none;
-    }
-}
-
 @media (max-width: 480px) {
     .actions {
         flex-direction: column;
@@ -217,6 +270,7 @@ body {
         min-width: 100%;
     }
 }
+
 .about-section {
     background-color: var(--color-dark-blue);
     padding: 80px 20px;
@@ -409,7 +463,7 @@ body {
 
 .event-description {
     margin-bottom: 20px;
-    flex-grow: 1; /* Pushes meta and button to the bottom */
+    flex-grow: 1; 
 }
 
 .event-meta {
@@ -428,14 +482,14 @@ body {
     color: var(--color-light-blue);
 }
 
-/* Button consistency */
+
 .events-btn {
     width: 100%;
     padding: 12px 20px;
     margin-top: 5px;
     border-radius: 8px;
     font-weight: 600;
-    text-transform: none; /* Keep text natural for events */
+    text-transform: none; 
 }
 
 .view-all {
@@ -451,7 +505,7 @@ body {
 }
 
 .pillars-section {
-    background-color: var(--color-dark-blue); /* Use the darkest theme color */
+    background-color: var(--color-dark-blue); 
     padding: 80px 20px;
     color: var(--color-text-light);
     text-align: center;
@@ -530,7 +584,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Media Query for Mobile */
+
 @media (max-width: 768px) {
     .pillars-intro {
         margin-bottom: 40px;
@@ -600,7 +654,7 @@ body {
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    background-color: #1a1a2e; /* Dark input background */
+    background-color: #1a1a2e; 
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 6px;
     color: var(--color-text-white);
@@ -645,7 +699,7 @@ body {
 }
 
 .info-icon-wrapper {
-    background-color: rgba(91, 144, 244, 0.1); /* Light blue accent background */
+    background-color: rgba(91, 144, 244, 0.1); 
     color: var(--color-light-blue);
     font-size: 1.2rem;
     min-width: 40px;
