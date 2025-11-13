@@ -31,8 +31,8 @@ body {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1; /* Place it behind all content */
-    object-fit: cover; /* Ensures video scales without distorting aspect ratio */
+    z-index: -1;
+    object-fit: cover;
 }
 
 
@@ -115,7 +115,7 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
-.stats-section {
+/*.stats-section {
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -142,8 +142,30 @@ body {
     text-align: center;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    gap:10px;
+}
+*/.stats-section {
+    position: relative; /* Changed from absolute for better flow control */
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding-top: 50px; /* Spacing from the buttons above */
+    padding-bottom: 30px;
 }
 
+.stat-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--color-stat-bg);
+    /* ... (Rest of stat-card styling remains unchanged) ... */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    gap:10px;
+}
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
