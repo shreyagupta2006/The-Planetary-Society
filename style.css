@@ -115,37 +115,9 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
-/*.stats-section {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 4;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    width: 90%;
-    max-width: 1200px;
-    flex-wrap: wrap;
-}
 
-.stat-card {
-    flex: 1;
-    min-width: 250px;
-    background-color: var(--color-stat-bg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    gap:10px;
-}
-*/.stats-section {
-    position: relative; /* Changed from absolute for better flow control */
+.stats-section {
+    position: relative; 
     z-index: 4;
     display: flex;
     justify-content: center;
@@ -153,7 +125,7 @@ body {
     width: 100%;
     max-width: 1200px;
     flex-wrap: wrap;
-    padding-top: 50px; /* Spacing from the buttons above */
+    padding-top: 50px; 
     padding-bottom: 30px;
 }
 
@@ -161,7 +133,7 @@ body {
     flex: 1;
     min-width: 250px;
     background-color: var(--color-stat-bg);
-    /* ... (Rest of stat-card styling remains unchanged) ... */
+    
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     gap:10px;
@@ -417,7 +389,7 @@ body {
 
 
 .events-section {
-    background-color: var(--color-feature-bg); /* Use the slightly lighter dark background */
+    background-color: var(--color-feature-bg); 
     padding: 80px 20px;
     color: var(--color-text-light);
 }
